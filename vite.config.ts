@@ -41,7 +41,7 @@ export default ({ mode }: { mode: string }) => {
       proxy: {
         // 选项写法
         "/api": {
-          target: "http://imtest.datalk.biz:8888",
+          target: "http://xxxxxx.com",
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ""),
         },
