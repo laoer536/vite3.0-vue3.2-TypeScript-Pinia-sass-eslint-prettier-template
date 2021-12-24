@@ -11,7 +11,7 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "baseUrl": ".",
-    "paths": {     //在vue+ts项目中 设置这里也需要设定path 否则ts识别不了路径会报错
+    "paths": {     //设置这里也需要设定path 否则ts识别不了路径会报错 即使你在vite里面设置了快捷路径
       "@/*": ["src/*"],
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
