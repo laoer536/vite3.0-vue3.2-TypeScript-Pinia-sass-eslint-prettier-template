@@ -27,6 +27,6 @@
 <div align="left">
 <img alt="Liu Jie" src="https://s2.loli.net/2021/12/16/rxjhMFtGElVIuyz.png" width=50 />
 
-*I'm LiuJie, a Front-end technical lunatics.*
+*I'm LiuJie, a Front-end technical lunatics.* 
 
-[Github](https://github.com/laoer536)
+[Github](https://github.com/laoer536) 
