@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
+import format from "date-fns/format";
 
 export default ({ mode }: { mode: string }) => {
   console.log("当前环境", mode);
@@ -47,7 +48,7 @@ export default ({ mode }: { mode: string }) => {
     },
     //构建
     build: {
-      outDir: "dist", //输出路径
+      outDir: `dist_${format(new Date(), "yyyyMMdd_HHmm")}`, //输出路径  新增打日期包
       assetsDir: "assets", //指定生成静态资源的存放路径（相对于 build.outDir）。
       assetsInlineLimit: 4096, //小于此阈值的导入或引用资源将内联为 base64 编码，以避免额外的 http 请求。设置为 0 可以完全禁用此项
       //构建后是否生成 source map 文件
