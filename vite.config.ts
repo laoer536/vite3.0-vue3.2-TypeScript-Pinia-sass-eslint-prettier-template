@@ -10,7 +10,7 @@ export default ({ mode }: { mode: string }) => {
   return defineConfig({
     plugins: [vue()],
     //项目部署的基础路径,
-    base: loadEnv(mode, process.cwd()).VITE_PUBLIC_PATH, //关键代码
+    base: loadEnv(mode, process.cwd()).VITE_PUBLIC_PATH,
     //项目根目录
     root: process.cwd(),
     //模式配置
