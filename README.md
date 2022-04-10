@@ -1,4 +1,4 @@
-# vite2.6-vue3.2-TypeScript-less-eslint-prettier-template
+# vite2.6-vue3.2-TypeScript-Pinia-less-eslint-prettier-template
 
 这是一个vite+vue3.2的模板项目 希望对你有所启发  别忘了在你的编辑器中启用prettier规范你的代码
 
