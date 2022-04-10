@@ -4,7 +4,7 @@ import { storeToRefs } from "pinia";
 import { useUserStore } from "@/p-store/user";
 const userStore = useUserStore();
 const { userName, age, doubleAge } = storeToRefs(userStore);
-const inputAge = ref<number>(userStore.age);
+const inputAge = ref<number>(age.value);
 function changeAge() {
   console.log(inputAge.value);
   userStore.changeAge(inputAge.value);
