@@ -117,7 +117,7 @@ class MyAxios {
   ): Promise<T> {
     return this.axiosInstance.post(url, file, {
       headers: { "Content-Type": "multipart/form-data" },
-      signal: controller ? controller.signal : undefined, //用于文件上传可以取消  只需在外部调用controller.abort()即可。 参考//https://juejin.cn/post/6954919023205154824
+      signal: controller ? controller.signal : undefined, //用于文件上传可以取消  只需在外部调用controller.abort()即可。 参考//https://juejin.cn/post/6954919023205154824以及https://axios-http.com/zh/docs/cancellation
     });
   }
 
@@ -130,7 +130,7 @@ class MyAxios {
     return this.axiosInstance.get(url, {
       params: data,
       ...otherConfig,
-      signal: controller ? controller.signal : undefined, //用于文件下载可以取消  只需在外部调用controller.abort()即可。 参考//https://juejin.cn/post/6954919023205154824
+      signal: controller ? controller.signal : undefined, //用于文件下载可以取消  只需在外部调用controller.abort()即可。 参考//https://juejin.cn/post/6954919023205154824以及https://axios-http.com/zh/docs/cancellation
     });
   }
 
