@@ -1,10 +1,8 @@
 # vite2.6-vue3.2-TypeScript-Pinia-less-eslint-prettier-template
 
-这是一个vite+vue3.2的模板项目 希望对你有所启发  别忘了在你的编辑器中启用prettier规范你的代码
+这是一个 vite+vue3.2 的模板项目 希望对你有所启发 别忘了在你的编辑器中启用 prettier 规范你的代码
 
 ![image-20211222214807951](https://s2.loli.net/2021/12/22/ZqVGoM3paRuPXKY.png)
-
-
 
 ## 步骤说明：
 
@@ -22,11 +20,9 @@
    >
    > (可根据项目添加打包命令以及环境文件）
 
-
-
 <div align="left">
 <img alt="Liu Jie" src="https://s2.loli.net/2021/12/16/rxjhMFtGElVIuyz.png" width=50 />
 
-*I'm LiuJie, a Front-end technical lunatics.* 
+_I'm LiuJie, a Front-end technical lunatics._
 
-[Github](https://github.com/laoer536) 
+[Github](https://github.com/laoer536)
