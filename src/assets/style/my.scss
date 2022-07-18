@@ -1,0 +1,13 @@
+.float-box {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.center-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

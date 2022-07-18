@@ -1,24 +1,24 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
 interface UserInfo {
-  userName: string;
-  age: number;
+  userName: string
+  age: number
 }
-export const useUserStore = defineStore("user", {
+export const useUserStore = defineStore('user', {
   state: (): UserInfo => ({
-    userName: "LiuJie",
+    userName: 'LiuJie',
     age: 23,
     //userData: null,
   }),
   getters: {
     doubleAge(): number {
-      return this.age * 2;
+      return this.age * 2
     },
   },
   actions: {
     changeAge(age: number) {
-      console.log(age, this.age);
-      this.age = age;
+      console.log(age, this.age)
+      this.age = age
     },
 
     //可以直接使用异步操作
@@ -34,4 +34,4 @@ export const useUserStore = defineStore("user", {
     },
   },*/
   },
-});
+})
