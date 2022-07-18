@@ -5,7 +5,7 @@
 
 ## 步骤说明：
 
-1. 克隆代码：执行命令---git clone https://github.com/laoer536/vite2.6-vue3.2-TypeScript-less-eslint-prettier-template.git
+1. 克隆代码：执行命令---git clone https://github.com/laoer536/vite3.0-vue3.2-TypeScript-Pinia-less-eslint-prettier-template.git
 
 2. 编辑器打开并下载依赖：执行命令---yarn
 
