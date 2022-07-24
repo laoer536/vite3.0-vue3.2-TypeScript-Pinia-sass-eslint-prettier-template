@@ -60,8 +60,8 @@ export default ({ command, mode }: ConfigEnv) => {
     },
     //构建
     build: {
-      // outDir: `dist_${format(new Date(), 'yyyyMMdd_HHmm')}`, //输出路径  新增打日期包
-      //构建后是否生成 source map 文件
+      // outDir: `dist`,
+      // assetsDir: 'assets', //指定生成静态资源的存放路径（相对于 build.outDir）。
       sourcemap: mode != 'production',
       //打包去掉打印信息 保留debugger vite3需要单独安装terser才行
       // minify: 'terser',
