@@ -1,19 +1,35 @@
+:root {
+  --c-primary: #5fc178;
+  --c-text: #333;
+  --c-bg: #fff;
+}
+
+.dark {
+  --c-text: #fafafa;
+  --c-bg: #121212;
+}
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
 html,
-body,
-#app {
+body{
   height: 100%;
   margin: 0;
   padding: 0;
 }
+body{
+  max-width: 900px;
+  margin: 0 auto;
+}
+#app{
+  padding:1rem 1rem 1rem;
+  height: 100%;
+}
 
 html.dark {
   background: #121212;
-}
-
-body{
-  max-width: 900px;
-  padding:1rem 1rem 1rem;
-  margin: 0 auto;
 }
 
 input:focus {
@@ -38,9 +54,7 @@ input:focus {
 html {
   color: var(--c-text);
   background-color: var(--c-bg);
-
   scroll-behavior: smooth;
-
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
 }
@@ -51,7 +65,6 @@ a {
 
 button {
   outline: none;
-
   &:focus,
   &:active {
     outline: none;
