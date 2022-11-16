@@ -6,3 +6,11 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+// with vite-plugin-vue-markdown, markdowns can be treat as Vue components
+declare module '*.md' {
+  import { type DefineComponent } from 'vue'
+  // eslint-disable-next-line @typescript-eslint/ban-types, @typescript-eslint/no-explicit-any
+  const component: DefineComponent<{}, {}, any>
+  export default component
+}

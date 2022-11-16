@@ -3,6 +3,11 @@ import type { ConfigEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
+import Markdown from 'vite-plugin-vue-markdown'
+import Prism from 'markdown-it-prism'
+import LinkAttributes from 'markdown-it-link-attributes'
+import Pages from 'vite-plugin-pages'
+import Unocss from 'unocss/vite'
 
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv) => {
@@ -11,7 +16,28 @@ export default ({ command, mode }: ConfigEnv) => {
   console.log('当前环境配置', currentEnv) //loadEnv即加载根目录下.env.[mode]环境配置文件
   return defineConfig({
     plugins: [
-      vue(),
+      vue({
+        include: [/\.vue$/, /\.md$/],
+      }),
+      Unocss(),
+      Pages({
+        extensions: ['vue', 'md'],
+        dirs: 'src/views',
+        exclude: ['**/components/*.vue'],
+      }),
+      Markdown({
+        markdownItSetup(md) {
+          // https://prismjs.com/
+          md.use(Prism, { defaultLanguageForUnknown: 'html' })
+          md.use(LinkAttributes, {
+            matcher: (link: string) => /^https?:\/\//.test(link),
+            attrs: {
+              target: '_blank',
+              rel: 'noopener',
+            },
+          })
+        },
+      }),
       AutoImport({
         imports: ['vue', 'vue-router', '@vueuse/core', 'pinia'],
         dts: './src/auto-imports.d.ts',
