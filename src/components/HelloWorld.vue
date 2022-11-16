@@ -10,7 +10,7 @@ const baseUrl = import.meta.env.VITE_API_BASE_URL
     <h1>{{ msg }}----{{ baseUrl }}</h1>
 
     <div class="card">
-      <button type="button" @click="count++">count is {{ count }}</button>
+      <button class="btn" type="button" @click="count++">count is {{ count }}</button>
       <p>
         Edit
         <code>components/HelloWorld.vue</code>
@@ -25,7 +25,7 @@ const baseUrl = import.meta.env.VITE_API_BASE_URL
     </p>
     <p>
       Install
-      <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
+      <a href="https://github.com/johnsoncodehk/volar" target="_blank" class="tag">Volar</a>
       in your IDE for a better DX
     </p>
     <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
