@@ -3,12 +3,12 @@ title: 帮助
 ---
 
 - 相关链接
-    - [居家菜谱投稿](https://docs.qq.com/form/page/DWk9GWW9oTmlXZU9V)
-    - [晒晒你的菜](https://docs.qq.com/sheet/DQk1vdkhFV0twQVNS?tab=dmeahc)
-    - [反馈建议](https://docs.qq.com/sheet/DQk1vdkhFV0twQVNS?tab=snaau2)
+  - [居家菜谱投稿](https://docs.qq.com/form/page/DWk9GWW9oTmlXZU9V)
+  - [晒晒你的菜](https://docs.qq.com/sheet/DQk1vdkhFV0twQVNS?tab=dmeahc)
+  - [反馈建议](https://docs.qq.com/sheet/DQk1vdkhFV0twQVNS?tab=snaau2)
 - 网站相关
-    - 故障/新功能反馈：[Issues](https://github.com/YunYouJun/cook/issues)
-    - 交流/建议/分享：[Discussions](https://github.com/YunYouJun/cook/issues)
+  - 故障/新功能反馈：[Issues](https://github.com/YunYouJun/cook/issues)
+  - 交流/建议/分享：[Discussions](https://github.com/YunYouJun/cook/issues)
 
 ## **模式说明**
 
@@ -31,11 +31,11 @@ title: 帮助
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import MdEditor from 'md-editor-v3';
-import 'md-editor-v3/lib/style.css';
+import { ref } from 'vue'
+import MdEditor from 'md-editor-v3'
+import 'md-editor-v3/lib/style.css'
 
-const text = ref('Hello Editor!');
+const text = ref('Hello Editor!')
 </script>
 ```
 
@@ -48,7 +48,7 @@ const text = ref('Hello Editor!');
 1. 清除 Cookie（点击浏览器网址前方的 🔒 图标，找到 Cookie 并清除）
 2. 🔒 图标，网站数据（清除）
 3. 强制刷新缓存
-    - Windows: `Ctrl + F5`
-    - macOS: `Cmd + Shift + R`
+   - Windows: `Ctrl + F5`
+   - macOS: `Cmd + Shift + R`
 
 <br />
