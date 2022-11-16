@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper.cdc0426e.js";import{o as _,c}from"./index.37bc1dfc.js";const o={};function r(t,n){return _(),c("div",null,"\u672A\u627E\u5230\u9875\u9762")}const l=e(o,[["render",r]]);export{l as default};
