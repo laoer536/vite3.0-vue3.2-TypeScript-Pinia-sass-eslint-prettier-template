@@ -8,6 +8,7 @@ import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Pages from 'vite-plugin-pages'
 import Unocss from 'unocss/vite'
+import Emoji from 'markdown-it-emoji'
 
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv) => {
@@ -28,6 +29,7 @@ export default ({ command, mode }: ConfigEnv) => {
       Markdown({
         markdownItSetup(md) {
           // https://prismjs.com/
+          md.use(Emoji)
           md.use(Prism, { defaultLanguageForUnknown: 'html' })
           md.use(LinkAttributes, {
             matcher: (link: string) => /^https?:\/\//.test(link),

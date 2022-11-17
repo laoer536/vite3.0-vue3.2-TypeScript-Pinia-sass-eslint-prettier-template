@@ -13,6 +13,7 @@ const baseUrl = import.meta.env.VITE_API_BASE_URL
     <div class="card">
       <button class="btn" type="button" @click="count++">count is {{ count }}</button>
       <button class="btn" type="button" @click="router.push('/promise')">点击跳转到promise页面</button>
+      <button class="btn" type="button" @click="router.push('/me')">关于我</button>
       <p>
         Edit
         <code>components/HelloWorld.vue</code>
