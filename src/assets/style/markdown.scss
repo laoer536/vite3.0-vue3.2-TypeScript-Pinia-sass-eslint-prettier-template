@@ -1,6 +1,6 @@
 @import 'prism-theme-vars/base.css';
 @import 'star-markdown-css/src/scss/theme/yun.scss';
-html:not(.dark) {
+html:not(.dark) .markdown-body {
   --prism-foreground: #393a34;
   --prism-background: #fbfbfb;
   --prism-comment: #a0ada0;
@@ -22,7 +22,7 @@ html:not(.dark) {
   --prism-json-property: #698c96;
 }
 
-html.dark {
+html.dark .markdown-body {
   --prism-foreground: #d4cfbf;
   --prism-background: #151515;
   --prism-comment: #758575;
