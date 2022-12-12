@@ -6,7 +6,7 @@ useVcosole()
 
 <template>
   <div>
-    <div i="ri-sun-line dark:ri-moon-line" @click="toggleDark()" />
+    <div i="ri-sun-line  dark:ri-moon-line" @click="toggleDark()" />
     <router-view />
   </div>
 </template>
