@@ -24,7 +24,7 @@ export default ({ command, mode }: ConfigEnv) => {
       Pages({
         extensions: ['vue', 'md'],
         dirs: 'src/views',
-        exclude: ['**/components/*.vue'],
+        exclude: ['**/components/*'],
       }),
       Markdown({
         markdownItSetup(md) {
