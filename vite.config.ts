@@ -3,11 +3,11 @@ import type { ConfigEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
+import Pages from 'vite-plugin-pages'
+import Unocss from 'unocss/vite'
 import Markdown from 'vite-plugin-vue-markdown'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
-import Pages from 'vite-plugin-pages'
-import Unocss from 'unocss/vite'
 import Emoji from 'markdown-it-emoji'
 
 // https://vitejs.dev/config/
