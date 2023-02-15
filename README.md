@@ -1,7 +1,7 @@
 # vite4.0-vue3.2-TypeScript-Pinia-sass-eslint-prettier-template
 
 这是一个 vite4.0+vue3.2 的模板项目 希望对你有所启发 别忘了在你的编辑器中启用 prettier 规范你的代码 （已启用并配置 eslint+prettier+husky 自动对项目代码进行规范，6 得很 🤣）
-另外加入了 API 自动导入，写代码再也不用写很多 import 了，API 方法直接用，开发速度、代码优雅度嗖嗖的！🤓 再者引入了 vueuse 库，超多酷炫的方法，等你探索！
+另外加入了 API 自动导入，写代码再也不用写很多 import 了，API 方法直接用，开发速度、代码优雅度嗖嗖的！🤓 再者引入了 vueuse 库，超多酷炫的方法，等你探索！增加md文件的解析支持。
 
 ## 步骤说明：
 
