@@ -1,10 +1,21 @@
-import type { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
+import type { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios'
 import axios from 'axios'
 import { axiosBaseOptions } from '@/network/axios/axios-setup'
 
 import type { AxiosDownload, Upload, UrlDownload } from '@/network/axios/type'
-// import secretTool from "@/network/secret-transmission/secret-tool";  前端涉及加密解密时启用
-// import { resBaseInfo } from "@/network/api/api-res-model";
+
+//优先采用RFC 5897  让与url直接通过a标签的下载的结果相同
+function analysisFilename(contentDisposition: string): string {
+  let regex = /filename\*=\S+?''(.+?)(;|$)/
+  if (regex.test(contentDisposition)) {
+    return RegExp.$1
+  }
+  regex = /filename="{0,1}([\S\s]+?)"{0,1}(;|$)/
+  if (regex.test(contentDisposition)) {
+    return RegExp.$1
+  }
+  return '文件名获取异常'
+}
 
 class MyAxios {
   private readonly axiosInstance: AxiosInstance
@@ -119,9 +130,7 @@ class MyAxios {
           a.download = fileName
         } else {
           //这里需要更据实际情况从‘content-disposition’中截取 不一定正确
-          a.download = decodeURIComponent(
-            (res.headers['content-disposition'] as string).split(';').slice(-1)[0].split('=')[1].replaceAll('"', '') //对于使用encodeURI()或者encodeURIComponent()将文件名中文转码的情况 这里解码一下
-          )
+          a.download = decodeURIComponent(analysisFilename(res.headers['content-disposition']))
         }
         a.href = URL.createObjectURL(blob)
         document.body.appendChild(a)
