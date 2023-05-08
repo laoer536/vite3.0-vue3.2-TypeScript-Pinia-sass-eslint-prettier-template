@@ -129,7 +129,6 @@ class MyAxios {
         if (fileName) {
           a.download = fileName
         } else {
-          //这里需要更据实际情况从‘content-disposition’中截取 不一定正确
           a.download = decodeURIComponent(analysisFilename(res.headers['content-disposition']))
         }
         a.href = URL.createObjectURL(blob)
