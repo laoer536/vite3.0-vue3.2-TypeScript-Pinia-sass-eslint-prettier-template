@@ -4,7 +4,7 @@ This is a template project with vite4.0+vue3.2. I hope it can be enlightening to
 
 In addition, API automatic import has been added, so there is no need to write a lot of imports when writing code. API methods are directly used, and the development speed and code elegance are amazing! 🤓 Furthermore, the Vueuse library has been introduced, with a plethora of cool methods waiting for you to explore!
 
-## 步骤说明：
+## Step-by-step instructions：
 
 1. Clone the code：Execute the command---git clone https://github.com/laoer536/vite3.0-vue3.2-TypeScript-Pinia-sass-eslint-prettier-template.git
 
