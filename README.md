@@ -7,15 +7,15 @@
 
 1. 克隆代码：执行命令---git clone https://github.com/laoer536/vite3.0-vue3.2-TypeScript-Pinia-sass-eslint-prettier-template.git
 
-2. 编辑器打开并下载依赖：执行命令---yarn
+2. 编辑器打开并下载依赖：执行命令--- `pnpm i`
 
-3. 运行项目：yarn dev
+3. 运行项目：pnpm dev
 
 4. 打包项目
 
-   > 测试包：yarn build:test
+   > 测试包：pnpm build:test
    >
-   > 正式包：yarn build
+   > 正式包：pnpm build
    >
    > (可根据项目添加打包命令以及环境文件）
 
