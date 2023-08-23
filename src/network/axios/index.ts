@@ -41,7 +41,7 @@ class MyAxios {
       (error) => {
         console.log(`axios请求拦截部分报错，错误信息error`, error)
         return Promise.reject(error)
-      }
+      },
     )
 
     //响应拦截  从接口响应的数据在这里处理 例如解密等  时间发生在then catch前
@@ -84,27 +84,27 @@ class MyAxios {
           }*/
 
         return Promise.reject(error)
-      }
+      },
     )
   }
 
-  get<T = any>(url: string, data?: object): Promise<T> {
+  get<T>(url: string, data?: object): Promise<T> {
     return this.axiosInstance.get(url, { params: data })
   }
 
-  post<T = any>(url: string, data?: object): Promise<T> {
+  post<T>(url: string, data?: object): Promise<T> {
     return this.axiosInstance.post(url, data)
   }
 
-  put<T = any>(url: string, data?: object): Promise<T> {
+  put<T>(url: string, data?: object): Promise<T> {
     return this.axiosInstance.put(url, data)
   }
 
-  delete<T = any>(url: string, data?: object): Promise<T> {
+  delete<T>(url: string, data?: object): Promise<T> {
     return this.axiosInstance.delete(url, data)
   }
 
-  upload<T = any>(data: Upload): Promise<T> {
+  upload<T>(data: Upload): Promise<T> {
     const { url, formData, controller, onUploadProgress } = data
     return this.axiosInstance.post(url, formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
@@ -113,7 +113,7 @@ class MyAxios {
     })
   }
 
-  async uploadStream<T = any>(data: UploadStream): Promise<T> {
+  async uploadStream<T>(data: UploadStream): Promise<T> {
     const { url, file, controller, onUploadProgress } = data
     /** generateSHA 生成文件SHA hash  用于标识文件唯一性 往往会用上 这里会用到crypto-js库 **/
     // async function generateSHA(file: File): Promise<string> {

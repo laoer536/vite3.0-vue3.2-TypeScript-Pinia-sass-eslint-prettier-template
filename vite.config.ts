@@ -5,40 +5,19 @@ import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Pages from 'vite-plugin-pages'
 import Unocss from 'unocss/vite'
-import Markdown from 'vite-plugin-vue-markdown'
-import Prism from 'markdown-it-prism'
-import LinkAttributes from 'markdown-it-link-attributes'
-import Emoji from 'markdown-it-emoji'
 
-// https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv) => {
   const currentEnv = loadEnv(mode, process.cwd())
   console.log('当前模式', command)
   console.log('当前环境配置', currentEnv) //loadEnv即加载根目录下.env.[mode]环境配置文件
   return defineConfig({
     plugins: [
-      vue({
-        include: [/\.vue$/, /\.md$/],
-      }),
+      vue(),
       Unocss(),
       Pages({
         extensions: ['vue', 'md'],
         dirs: 'src/views',
         exclude: ['**/components/*'],
-      }),
-      Markdown({
-        markdownItSetup(md) {
-          // https://prismjs.com/
-          md.use(Emoji)
-          md.use(Prism, { defaultLanguageForUnknown: 'html' })
-          md.use(LinkAttributes, {
-            matcher: (link: string) => /^https?:\/\//.test(link),
-            attrs: {
-              target: '_blank',
-              rel: 'noopener',
-            },
-          })
-        },
       }),
       AutoImport({
         imports: ['vue', 'vue-router', '@vueuse/core', 'pinia'],
@@ -49,7 +28,6 @@ export default ({ command, mode }: ConfigEnv) => {
           enabled: true, // Default `false`
           filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
         },
-        // resolvers: [ElementPlusResolver()],
       }),
     ],
     //项目部署的基础路径,
@@ -66,11 +44,8 @@ export default ({ command, mode }: ConfigEnv) => {
         '@hooks': resolve(__dirname, './src/hooks'),
       },
     },
-    //服务
     server: {
-      //自定义代理---解决跨域
       proxy: {
-        // 选项写法
         '/api': {
           target: 'http://xxxxxx.com',
           changeOrigin: true,
