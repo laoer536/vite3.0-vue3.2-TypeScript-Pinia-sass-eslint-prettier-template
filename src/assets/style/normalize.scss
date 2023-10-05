@@ -9,23 +9,27 @@
   --c-bg: #121212;
 }
 
-*,*::before,*::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html,
-body{
+body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
-body{
-  max-width: 900px;
+
+body {
   margin: 0 auto;
+  max-width: 900px;
 }
-#app{
-  padding:1rem 1rem 1rem;
+
+#app {
   height: 100%;
+  padding: 1rem;
 }
 
 html.dark {
@@ -41,21 +45,21 @@ input:focus {
 }
 
 #nprogress .bar {
-  background: rgb(13,148,136);
+  background: rgb(13 148 136);
+  height: 2px;
+  left: 0;
   opacity: 0.75;
   position: fixed;
-  z-index: 1031;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 2px;
+  z-index: 1031;
 }
 
 html {
-  color: var(--c-text);
   background-color: var(--c-bg);
-  scroll-behavior: smooth;
+  color: var(--c-text);
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -65,16 +69,20 @@ a {
 
 button {
   outline: none;
+
   &:focus,
   &:active {
     outline: none;
   }
 }
 
-hr {opacity: 0.1;}
+hr {
+  opacity: 0.1;
+}
 
 .tag {
   margin: 4px;
   padding: 2px 4px;
+
   // border: 1px solid var(--c-text);
 }
