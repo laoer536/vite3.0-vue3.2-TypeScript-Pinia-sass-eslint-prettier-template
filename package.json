@@ -7,10 +7,12 @@
     "dev": "vite",
     "build:test": "vue-tsc --noEmit && vite build --mode test",
     "build": "vue-tsc --noEmit && vite build --mode production",
+    "build:docker": "tsc && vite build --mode docker",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "docker:build": "docker build -t docker-vue ."
   },
   "dependencies": {
     "@vueuse/core": "^10.3.0",
