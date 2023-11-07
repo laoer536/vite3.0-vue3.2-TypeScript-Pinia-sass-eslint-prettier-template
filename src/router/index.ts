@@ -3,8 +3,9 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import NProgress from 'nprogress'
-import routes from '~pages'
 import { createRouter, createWebHistory } from 'vue-router'
+
+import routes from '~pages'
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_PUBLIC_PATH as string),
   routes,
