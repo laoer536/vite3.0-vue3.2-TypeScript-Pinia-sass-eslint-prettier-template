@@ -1,14 +1,14 @@
- {
+{
   "env": {
     "browser": true,
     "es2021": true,
     "node": true
   },
-  "extends": [
-    "./.eslintrc-auto-import.json",
-    "code-style-lint-vue3-ts"
-  ],
+  "extends": ["./.eslintrc-auto-import.json", "code-style-lint-vue3-ts"],
+  "plugins": ["simple-import-sort"],
   "rules": {
-    "vue/multi-word-component-names": "off"
+    "vue/multi-word-component-names": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
   }
 }

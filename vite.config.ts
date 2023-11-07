@@ -4,7 +4,6 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Pages from 'vite-plugin-pages'
-import Unocss from 'unocss/vite'
 
 export default ({ command, mode }: ConfigEnv) => {
   const currentEnv = loadEnv(mode, process.cwd())
@@ -13,7 +12,6 @@ export default ({ command, mode }: ConfigEnv) => {
   return defineConfig({
     plugins: [
       vue(),
-      Unocss(),
       Pages({
         extensions: ['vue', 'md'],
         dirs: 'src/views',
@@ -66,14 +64,6 @@ export default ({ command, mode }: ConfigEnv) => {
       outDir: mode === 'docker' ? 'dist' : 'docs',
       // assetsDir: 'assets', //指定生成静态资源的存放路径（相对于 build.outDir）。
       sourcemap: mode != 'production',
-      //打包去掉打印信息 保留debugger vite3需要单独安装terser才行
-      // minify: 'terser',
-      // terserOptions: {
-      //   compress: {
-      //     drop_console: true,
-      //     drop_debugger: false,
-      //   },
-      // },
     },
   })
 }

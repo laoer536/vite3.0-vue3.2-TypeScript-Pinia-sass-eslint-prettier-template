@@ -37,6 +37,25 @@ const baseUrl = import.meta.env.VITE_API_BASE_URL
 
 <style lang="scss" scoped>
 .home {
+  text-align: center;
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+  }
+
+  button,
+  a.btn {
+    background-color: rgb(6 182 212);
+    border-radius: 9999px;
+    padding: 0.5rem;
+  }
+
   .read-the-docs {
     color: #888;
   }
