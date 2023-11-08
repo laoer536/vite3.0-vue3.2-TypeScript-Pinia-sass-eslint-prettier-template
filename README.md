@@ -21,6 +21,14 @@ Docker support.
    > Production Package：pnpm build
    >
    > (You can add packaging commands as well as environment files based on your project.）`.env` file
+   
+### How to use docker?
+
+1. Ensure that Docker is installed on your computer.
+
+2. Just run `pnpm release:local`
+
+3. Then you can view your project on `<your IP>:8081`
 
 <div align="left">
 <img alt="Liu Jie" src="https://s2.loli.net/2021/12/16/rxjhMFtGElVIuyz.png" width=50 />
