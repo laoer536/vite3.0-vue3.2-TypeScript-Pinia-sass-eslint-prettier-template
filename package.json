@@ -9,10 +9,10 @@
     "build": "vue-tsc --noEmit && vite build --mode production",
     "build:docker": "tsc && vite build --mode docker",
     "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "lint": "vue-tsc --noEmit && eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
     "prepare": "husky install",
-    "docker:build": "docker build -t docker-vue .",
+    "docker:build": "vue-tsc --noEmit && docker build -t docker-vue .",
     "docker:run": "docker rm -f docker-vue && docker run --name docker-vue -d -p 8082:8082 docker-vue",
     "release:local": "pnpm docker:build && pnpm docker:run"
   },
