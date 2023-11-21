@@ -1,4 +1,4 @@
-# vite4.0-vue3.2-TypeScript-Pinia-sass-eslint-prettier-template
+# vite^5-vue^3.3-TypeScript-Pinia-sass-eslint-prettier-template
 
 This is a template project with vite4.0+vue3.2. I hope it can be enlightening to you. Don't forget to enable prettier to standardize your code in your editor (eslint+prettier+husky has been enabled and configured to automatically standardize project code, 6 is very good 🤣）
 
