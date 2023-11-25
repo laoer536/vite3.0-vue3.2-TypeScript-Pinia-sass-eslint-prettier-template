@@ -32,7 +32,7 @@ Docker support.
 
 ### Note
 
->Vite5 requires your node version to be 18+ or 20+.
+> Vite5 requires your node version to be 18+ or 20+.
 
 <div align="left">
 <img alt="Liu Jie" src="https://s2.loli.net/2021/12/16/rxjhMFtGElVIuyz.png" width=50 />
