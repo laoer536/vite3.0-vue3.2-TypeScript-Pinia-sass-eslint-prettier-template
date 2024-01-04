@@ -13,8 +13,6 @@ export default ({ command, mode }: ConfigEnv) => {
     plugins: [
       vue(),
       Pages({
-        extensions: ['vue', 'md'],
-        dirs: 'src/views',
         exclude: ['**/components/*'],
       }),
       AutoImport({
