@@ -12,14 +12,16 @@ const baseUrl = import.meta.env.VITE_API_BASE_URL
 
     <div class="card">
       <button class="btn" type="button" @click="count++">count is {{ count }}</button>
-      <button class="btn" type="button" @click="router.push('/promise')">点击跳转到promise页面</button>
-      <a class="btn" href="https://github.com/laoer536">关于我</a>
-      <p>
-        Edit
-        <code>components/HelloWorld.vue</code>
-        to test HMR
-      </p>
+      <button class="btn" type="button" @click="router.push('/promise')">click to jump to the promise page</button>
     </div>
+
+    <a class="btn" href="https://github.com/laoer536">About Me</a>
+
+    <p>
+      Edit
+      <code>components/HelloWorld.vue</code>
+      to test HMR
+    </p>
 
     <p>
       Check out
@@ -49,15 +51,13 @@ const baseUrl = import.meta.env.VITE_API_BASE_URL
     text-underline-offset: 4px;
   }
 
-  button,
-  a.btn {
-    background-color: rgb(6 182 212);
-    border-radius: 9999px;
-    padding: 0.5rem;
-  }
-
   .read-the-docs {
     color: #888;
+  }
+
+  .card {
+    display: flex;
+    gap: 50px;
   }
 }
 </style>

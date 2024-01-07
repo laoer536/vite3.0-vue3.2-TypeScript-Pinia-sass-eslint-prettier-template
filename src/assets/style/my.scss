@@ -11,3 +11,15 @@
   display: flex;
   justify-content: center;
 }
+
+button {
+  border: 2px solid #1b91ff;
+  border-radius: 9999px;
+  padding: 10px 30px;
+  transition: transform 0.3s linear;
+
+  &:hover {
+    color: #1b91ff;
+    transform: scale(1.1);
+  }
+}

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from '@components/HelloWorld.vue'
 const userStore = useUserStore()
-const { userName } = storeToRefs(userStore)
+const { userName, age } = storeToRefs(userStore)
 </script>
 
 <template>
@@ -14,6 +14,7 @@ const { userName } = storeToRefs(userStore)
         <img src="@assets/vue.svg" class="logo vue" alt="Vue logo" />
       </a>
     </div>
+    <button @click="userStore.changeAge">click add age ---- {{ age }}</button>
     <HelloWorld :msg="`Vite + Vue + Mobile + by${userName}`" />
   </div>
 </template>
@@ -23,14 +24,14 @@ const { userName } = storeToRefs(userStore)
   align-items: center;
   display: flex;
   flex-direction: column;
+  gap: 2em;
   height: 100%;
   justify-content: center;
-  gap: 2em;
 
   .logo-container {
     display: flex;
-    justify-content: center;
     gap: 10em;
+    justify-content: center;
 
     .logo {
       height: 13rem;
