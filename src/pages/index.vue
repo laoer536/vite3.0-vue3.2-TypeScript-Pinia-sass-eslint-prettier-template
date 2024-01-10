@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import HelloWorld from '@components/HelloWorld.vue'
-const userStore = useUserStore()
-const { userName, age } = storeToRefs(userStore)
 </script>
 
 <template>
-  <div class="index-page">
-    <div class="logo-container">
+  <div class="container">
+    <div>
       <a href="https://vitejs.dev" target="_blank">
         <img src="/vite.svg" class="logo" alt="Vite logo" />
       </a>
@@ -14,38 +12,30 @@ const { userName, age } = storeToRefs(userStore)
         <img src="@assets/vue.svg" class="logo vue" alt="Vue logo" />
       </a>
     </div>
-    <button @click="userStore.changeAge">click add age ---- {{ age }}</button>
-    <HelloWorld :msg="`Vite + Vue + Mobile + by${userName}`" />
+    <HelloWorld msg="Vite + Vue" />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.index-page {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  height: 100%;
-  justify-content: center;
+.container {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
-  .logo-container {
-    display: flex;
-    gap: 10em;
-    justify-content: center;
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    transition: filter 300ms;
+    will-change: filter;
+  }
 
-    .logo {
-      height: 13rem;
-      padding: 1.5rem;
-      will-change: filter;
-    }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
 
-    .logo:hover {
-      filter: drop-shadow(0 0 2rem #646cffaa);
-    }
-
-    .logo.vue:hover {
-      filter: drop-shadow(0 0 2rem #42b883aa);
-    }
+  .logo.vue:hover {
+    filter: drop-shadow(0 0 2em #42b883aa);
   }
 }
 </style>
