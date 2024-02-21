@@ -7,6 +7,7 @@
   "plugins": ["stylelint-order"],
   "rules": {
     "order/order": ["custom-properties", "dollar-variables", "declarations", "rules", "at-rules"],
-    "order/properties-alphabetical-order": true
+    "order/properties-alphabetical-order": true,
+    "scss/load-no-partial-leading-underscore": false
   }
 }

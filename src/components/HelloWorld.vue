@@ -1,63 +1,38 @@
 <script setup lang="ts">
-const router = useRouter()
+import { ref } from 'vue'
+
 defineProps<{ msg: string }>()
 
 const count = ref(0)
-const baseUrl = import.meta.env.VITE_API_BASE_URL
 </script>
 
 <template>
-  <div class="home">
-    <h1>{{ msg }}----{{ baseUrl }}</h1>
+  <h1>{{ msg }}</h1>
 
-    <div class="card">
-      <button class="btn" type="button" @click="count++">count is {{ count }}</button>
-      <button class="btn" type="button" @click="router.push('/promise')">click to jump to the promise page</button>
-    </div>
-
-    <a class="btn" href="https://github.com/laoer536">About Me</a>
-
+  <div class="card">
+    <button type="button" @click="count++">count is {{ count }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code>
       to test HMR
     </p>
-
-    <p>
-      Check out
-      <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>
-      , the official Vue + Vite starter
-    </p>
-    <p>
-      Install
-      <a href="https://github.com/johnsoncodehk/volar" target="_blank" class="tag">Volar</a>
-      in your IDE for a better DX
-    </p>
-    <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
   </div>
+
+  <p>
+    Check out
+    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>
+    , the official Vue + Vite starter
+  </p>
+  <p>
+    Install
+    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
+    in your IDE for a better DX
+  </p>
+  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
-<style lang="scss" scoped>
-.home {
-  text-align: center;
-
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  a {
-    text-decoration-line: underline;
-    text-underline-offset: 4px;
-  }
-
-  .read-the-docs {
-    color: #888;
-  }
-
-  .card {
-    display: flex;
-    gap: 50px;
-  }
+<style scoped>
+.read-the-docs {
+  color: #888;
 }
 </style>
