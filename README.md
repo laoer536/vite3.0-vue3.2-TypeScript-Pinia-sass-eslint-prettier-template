@@ -8,6 +8,8 @@ Docker support.
 
 ## Step-by-step instructions：
 
+> The quickest way to do this is to download the zip of the project or fork it into your personal repository.
+
 1. Clone the code：Execute the command---git clone https://github.com/laoer536/vite3.0-vue3.2-TypeScript-Pinia-sass-eslint-prettier-template.git
 
 2. The editor opens and downloads the dependencies：Execute the command--- `pnpm i`
