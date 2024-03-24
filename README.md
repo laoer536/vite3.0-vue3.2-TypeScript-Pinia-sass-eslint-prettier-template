@@ -8,6 +8,7 @@ Docker support.
 
 ## Project structure
 
+```
 .
 ├── .commitlintrc
 ├── .dockerignore
@@ -78,6 +79,7 @@ Docker support.
 ├── tsconfig.json
 ├── tsconfig.node.json
 └── vite.config.ts
+```
 
 ## Step-by-step instructions：
 
