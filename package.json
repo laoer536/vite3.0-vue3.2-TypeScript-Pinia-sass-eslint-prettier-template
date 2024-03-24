@@ -14,39 +14,40 @@
     "prepare": "husky install",
     "docker:build": "vue-tsc --noEmit && docker build -t docker-vue .",
     "docker:run": "docker rm -f docker-vue && docker run --name docker-vue -d -p 8082:8082 docker-vue",
-    "release:local": "pnpm docker:build && pnpm docker:run"
+    "release:local": "pnpm docker:build && pnpm docker:run",
+    "log:tree": "tree -N -I \"node_modules|.git|.idea\" -a"
   },
   "dependencies": {
-    "@vueuse/core": "^10.8.0",
-    "axios": "^1.6.7",
+    "@vueuse/core": "^10.9.0",
+    "axios": "^1.6.8",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "vconsole": "^3.15.1",
-    "vue": "^3.4.19",
-    "vue-router": "^4.2.5"
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.6.1",
-    "@commitlint/config-conventional": "^18.6.2",
-    "@types/node": "^20.11.19",
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@types/node": "^20.11.30",
     "@vitejs/plugin-vue": "^5.0.4",
-    "eslint": "^8.56.0",
-    "eslint-config-code-style-lint-vue3-ts": "^3.0.8",
+    "eslint": "^8.57.0",
+    "eslint-config-code-style-lint-vue3-ts": "^3.0.9",
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "husky": "^9.0.11",
     "postcss-html": "^1.6.0",
     "prettier": "^3.2.5",
-    "sass": "^1.71.1",
-    "stylelint": "^16.2.1",
+    "sass": "^1.72.0",
+    "stylelint": "^16.3.0",
     "stylelint-config-recommended-vue": "^1.5.0",
     "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-order": "^6.0.4",
     "stylelint-prettier": "^5.0.0",
-    "typescript": "^5.3.3",
+    "typescript": "^5.4.3",
     "unplugin-auto-import": "^0.17.5",
-    "vite": "^5.1.4",
+    "vite": "^5.2.4",
     "vite-plugin-pages": "^0.32.0",
-    "vue-tsc": "^1.8.27"
+    "vue-tsc": "^2.0.7"
   }
 }
