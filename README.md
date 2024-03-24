@@ -6,6 +6,79 @@ In addition, API automatic import has been added, so there is no need to write a
 
 Docker support.
 
+## Project structure
+
+.
+├── .commitlintrc
+├── .dockerignore
+├── .env.development
+├── .env.docker
+├── .env.production
+├── .env.test
+├── .eslintignore
+├── .eslintrc
+├── .eslintrc-auto-import.json
+├── .gitignore
+├── .husky
+│ ├── _
+│ │ ├── .gitignore
+│ │ └── husky.sh
+│ ├── commit-msg
+│ └── pre-commit
+├── .prettierignore
+├── .prettierrc
+├── .stylelintrc
+├── Dockerfile
+├── README.md
+├── docs
+│ ├── assets
+│ │ ├── _...all\_-lXteJMPx.js
+│ │ ├── index-CELIJxRU.css
+│ │ └── index-vI5x7G_Y.js
+│ ├── index.html
+│ └── vite.svg
+├── index.html
+├── nginx.conf
+├── package.json
+├── pnpm-lock.yaml
+├── public
+│ └── vite.svg
+├── src
+│ ├── App.vue
+│ ├── assets
+│ │ ├── style
+│ │ │ ├── \_my.scss
+│ │ │ ├── \_reset.scss
+│ │ │ └── global.scss
+│ │ └── vue.svg
+│ ├── auto-imports.d.ts
+│ ├── components
+│ │ └── HelloWorld.vue
+│ ├── hooks
+│ │ ├── useMode.ts
+│ │ └── useVconsole.ts
+│ ├── main.ts
+│ ├── network
+│ │ ├── api
+│ │ │ ├── api-params-moudle.ts
+│ │ │ ├── api-res-model.ts
+│ │ │ └── api.ts
+│ │ └── axios
+│ │ ├── axios-setup.ts
+│ │ ├── index.ts
+│ │ └── type.ts
+│ ├── pages
+│ │ ├── [...all].vue
+│ │ ├── index.vue
+│ ├── router
+│ │ └── index.ts
+│ ├── store
+│ │ └── user.ts
+│ └── vite-env.d.ts
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
 ## Step-by-step instructions：
 
 > The quickest way to do this is to download the zip of the project or fork it into your personal repository.
@@ -24,7 +97,7 @@ Docker support.
    >
    > (You can add packaging commands as well as environment files based on your project.）`.env` file
 
-### How to use docker?
+## How to use docker?
 
 1. Ensure that Docker is installed on your computer.
 
@@ -32,7 +105,7 @@ Docker support.
 
 3. Then you can view your project on `<your IP>:8081`
 
-### Note
+## Note
 
 > Vite5 requires your node version to be 18+ or 20+.
 
