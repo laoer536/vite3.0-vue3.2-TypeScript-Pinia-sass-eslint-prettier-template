@@ -13,7 +13,7 @@
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
     "prepare": "husky install",
     "docker:build": "vue-tsc --noEmit && docker build -t docker-vue .",
-    "docker:run": "docker rm -f docker-vue && docker run --name docker-vue -d -p 8082:8082 docker-vue",
+    "docker:run": "docker rm -f docker-vue && docker run --name docker-vue -d -p 80:8082 docker-vue",
     "release:local": "pnpm docker:build && pnpm docker:run",
     "log:tree": "tree -N -I \"node_modules|.git|.idea\" -a"
   },
