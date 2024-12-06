@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useVcosole } from '@hooks/useVconsole'
+import { useVcosole } from '@/hooks/useVconsole.ts'
 useVcosole()
 </script>
 

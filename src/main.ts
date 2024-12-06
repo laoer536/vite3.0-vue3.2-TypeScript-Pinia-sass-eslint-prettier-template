@@ -1,4 +1,4 @@
-import '@assets/style/global.scss'
+import '@/assets/style/global.scss'
 
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
