@@ -24,12 +24,7 @@
     "baseUrl": ".",
     "paths": {
       //You also need to set the path here, otherwise TS will report an error if it can't recognize the path, even if you set a shortcut path in vite
-      "@/*": ["src/*"],
-      "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      "@views/*": ["src/views/*"],
-      "@store/*": ["src/store/*"],
-      "@hooks/*": ["src/hooks/*"]
+      "@/*": ["src/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
